@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('home', [FrontController::class, 'home'])->name('home');
+Route::get('companies', [FrontController::class, 'companies'])->name('companies');
+Route::get('employees', [FrontController::class, 'employees'])->name('employees');
